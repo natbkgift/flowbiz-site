@@ -24,7 +24,7 @@ FlowBiz Phase 1 is a **presence and trust** establishment phase.
 - No overpromises or roadmap commitments
 - No "AI replaces humans" or "guaranteed results" claims
 
-Phase 1 makes FlowBiz look **real, active, and trustworthy**. Nothing more.
+Phase 1 is intended to present FlowBiz as **real, active, and trustworthy**. Nothing more.
 
 ## Repository Structure
 
@@ -174,7 +174,7 @@ pytest -q
 
 ## Phase 1 Deliverables
 
-✅ All Phase 1 deliverables completed:
+✅ Phase 1 deliverables (static site files):
 
 1. ✅ `web/astro/src/pages/index.astro`
 2. ✅ `web/astro/src/pages/building.astro`

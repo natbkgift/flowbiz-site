@@ -136,6 +136,10 @@ a:hover {
   align-items: center;
 }
 
+.nav-details {
+  margin-left: auto;
+}
+
 .nav-link {
   color: var(--text-secondary);
   font-size: 1rem;
@@ -151,32 +155,53 @@ a:hover {
   font-weight: 500;
 }
 
+.menu-toggle {
+  display: none;
+  background: none;
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+  color: var(--text-primary);
+}
+
+.menu-toggle::marker,
+.menu-toggle::-webkit-details-marker {
+  display: none;
+}
+
 /* Mobile navigation */
 @media (max-width: 767px) {
+  .header-content {
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .nav-details {
+    width: 100%;
+  }
+
   .nav {
     display: none;
-    position: fixed;
-    top: 60px;
-    left: 0;
-    right: 0;
+    position: static;
     background: var(--bg-primary);
     border-bottom: 1px solid var(--border-color);
     flex-direction: column;
     padding: var(--spacing-md);
     gap: var(--spacing-sm);
+    align-items: flex-start;
   }
   
-  .nav.active {
+  .nav-details[open] .nav {
     display: flex;
   }
   
   .menu-toggle {
-    display: block;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: var(--text-primary);
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    margin-left: auto;
   }
 }
 
