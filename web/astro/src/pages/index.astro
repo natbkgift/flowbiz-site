@@ -1,0 +1,58 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout 
+  title="FlowBiz - บริการที่สร้างผลลัพธ์จริง"
+  description="FlowBiz ให้บริการที่ออกแบบมาเพื่อช่วยให้ธุรกิจของคุณทำงานได้อย่างมีประสิทธิภาพ เราทำงานด้วยความซื่อสัตย์และโปร่งใส"
+>
+  <Header />
+  
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>บริการที่สร้างผลลัพธ์จริง</h1>
+        <p class="text-muted">
+          เราช่วยให้ธุรกิจของคุณทำงานได้อย่างมีประสิทธิภาพ<br>
+          ด้วยความซื่อสัตย์และโปร่งใส
+        </p>
+        <a href="/services" class="btn btn-primary">ดูบริการของเรา</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="text-center mb-lg">ทำไมต้อง FlowBiz</h2>
+        
+        <div class="cards-grid">
+          <div class="card">
+            <h3>ซื่อสัตย์</h3>
+            <p>เราบอกตรงว่าเราทำอะไรได้บ้าง ไม่สัญญาเกินจริง</p>
+          </div>
+          
+          <div class="card">
+            <h3>โปร่งใส</h3>
+            <p>คุณจะรู้ว่าเราทำงานอย่างไร และอะไรกำลังดำเนินอยู่</p>
+          </div>
+          
+          <div class="card">
+            <h3>ผลลัพธ์จริง</h3>
+            <p>เรามุ่งเน้นที่การสร้างคุณค่าจริงๆ ให้กับธุรกิจของคุณ</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background-color: var(--bg-secondary);">
+      <div class="container text-center">
+        <h2 class="mb-md">พร้อมเริ่มต้นแล้วหรือยัง?</h2>
+        <p class="text-muted mb-lg">มาคุยกันว่าเราจะช่วยธุรกิจของคุณได้อย่างไร</p>
+        <a href="/contact" class="btn btn-primary">ติดต่อเรา</a>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>

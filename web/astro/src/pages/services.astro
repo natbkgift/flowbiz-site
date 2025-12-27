@@ -1,0 +1,105 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout 
+  title="บริการของเรา - FlowBiz"
+  description="บริการที่ FlowBiz สามารถให้ได้ในปัจจุบัน เรามุ่งเน้นการสร้างคุณค่าจริงให้กับธุรกิจของคุณ"
+>
+  <Header />
+  
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1 class="text-center mb-md">บริการของเรา</h1>
+        <p class="text-center text-muted mb-lg" style="max-width: 600px; margin-left: auto; margin-right: auto;">
+          บริการที่เราสามารถให้ได้ในปัจจุบัน<br>
+          ไม่ใช่แผนในอนาคต
+        </p>
+        
+        <div class="cards-grid">
+          <div class="card">
+            <h3>ปรึกษาการทำงานของธุรกิจ</h3>
+            <p>
+              เราจะนั่งคุยกับคุณเพื่อเข้าใจว่าธุรกิจของคุณทำงานอย่างไร
+              และมีจุดไหนที่สามารถทำให้ดีขึ้นได้บ้าง
+            </p>
+            <p class="text-muted" style="font-size: 0.9rem; margin-bottom: 0;">
+              เหมาะสำหรับ: ธุรกิจที่ต้องการปรับปรุงกระบวนการทำงาน
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>ออกแบบขั้นตอนการทำงาน</h3>
+            <p>
+              เราช่วยออกแบบและจัดระเบียบขั้นตอนการทำงานให้ชัดเจน
+              ทำให้ทีมของคุณทำงานได้อย่างมีประสิทธิภาพมากขึ้น
+            </p>
+            <p class="text-muted" style="font-size: 0.9rem; margin-bottom: 0;">
+              เหมาะสำหรับ: ธุรกิจที่ต้องการจัดระเบียบการทำงาน
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>สร้างเครื่องมือที่ตอบโจทย์</h3>
+            <p>
+              ถ้าธุรกิจของคุณต้องการเครื่องมือเฉพาะทาง
+              เราสามารถสร้างให้ตรงตามความต้องการได้
+            </p>
+            <p class="text-muted" style="font-size: 0.9rem; margin-bottom: 0;">
+              เหมาะสำหรับ: ธุรกิจที่มีความต้องการเฉพาะ
+            </p>
+          </div>
+        </div>
+
+        <div style="max-width: 800px; margin: 3rem auto 0;">
+          <h2>วิธีการทำงาน</h2>
+          
+          <div class="card">
+            <h3>1. คุยกันก่อน</h3>
+            <p>
+              เราจะนั่งคุยกับคุณเพื่อเข้าใจธุรกิจและความต้องการของคุณ
+              ไม่มีค่าใช้จ่ายสำหรับการคุยครั้งแรก
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>2. วางแผนร่วมกัน</h3>
+            <p>
+              เราจะเสนอแนวทางที่เหมาะสมกับธุรกิจของคุณ
+              และประเมินเวลาและค่าใช้จ่ายอย่างตรงไปตรงมา
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>3. ทำงานทีละขั้น</h3>
+            <p>
+              เราทำงานทีละส่วน และให้คุณดูความก้าวหน้าเป็นระยะๆ
+              เพื่อให้มั่นใจว่าเป็นไปในทิศทางที่ถูกต้อง
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>4. ส่งมอบและติดตาม</h3>
+            <p>
+              เมื่อเสร็จแล้ว เราจะส่งมอบและแนะนำวิธีใช้งาน
+              และยังคงติดตามดูแลต่อไปตามที่ตกลงกัน
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background-color: var(--bg-secondary);">
+      <div class="container text-center">
+        <h2 class="mb-md">พร้อมเริ่มต้นหรือยัง?</h2>
+        <p class="text-muted mb-lg">มาคุยกันว่าเราจะช่วยธุรกิจของคุณได้อย่างไร</p>
+        <a href="/contact" class="btn btn-primary">ติดต่อเรา</a>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>

@@ -1,0 +1,19 @@
+---
+const pathname = Astro.url.pathname;
+const isActive = (path: string) => pathname === path || pathname === path + '/';
+---
+
+<header class="header">
+  <div class="container">
+    <div class="header-content">
+      <a href="/" class="logo">FlowBiz</a>
+      
+      <nav class="nav">
+        <a href="/" class={`nav-link ${isActive('/') ? 'active' : ''}`}>หน้าแรก</a>
+        <a href="/building" class={`nav-link ${isActive('/building') ? 'active' : ''}`}>กำลังสร้าง</a>
+        <a href="/services" class={`nav-link ${isActive('/services') ? 'active' : ''}`}>บริการ</a>
+        <a href="/contact" class="btn btn-primary">ติดต่อเรา</a>
+      </nav>
+    </div>
+  </div>
+</header>

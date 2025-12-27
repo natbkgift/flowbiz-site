@@ -48,3 +48,11 @@ htmlcov/
 # OS
 .DS_Store
 Thumbs.db
+
+# Node.js / Astro
+node_modules/
+.astro/
+dist/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
