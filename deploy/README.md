@@ -184,6 +184,6 @@ Consider setting up:
 
 ## Phase 1 Complete
 
-Once deployed, Phase 1 is complete. The website is live, static, and ready to establish FlowBiz's presence.
+Once deployed, Phase 1 focuses on a live, static website intended to establish FlowBiz's presence. Verify the checks above after deployment.
 
 **No further work should be done until Phase 2 requirements are defined.**
