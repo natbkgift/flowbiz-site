@@ -1,4 +1,2 @@
 User-agent: *
 Allow: /
-
-Sitemap: https://flowbiz.co.th/sitemap.xml
