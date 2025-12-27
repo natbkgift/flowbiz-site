@@ -1,4 +1,6 @@
 ---
+import '../styles/main.css';
+
 interface Props {
   title: string;
   description: string;
@@ -39,9 +41,6 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700&family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    
-    <!-- Styles -->
-    <link rel="stylesheet" href="/src/styles/main.css" />
   </head>
   <body>
     <slot />
