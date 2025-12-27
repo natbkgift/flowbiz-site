@@ -1,0 +1,99 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout 
+  title="ติดต่อเรา - FlowBiz"
+  description="ติดต่อ FlowBiz เพื่อสอบถามข้อมูลหรือนัดหมายปรึกษา เราพร้อมตอบคำถามของคุณ"
+>
+  <Header />
+  
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1 class="text-center mb-md">ติดต่อเรา</h1>
+        <p class="text-center text-muted mb-lg" style="max-width: 600px; margin-left: auto; margin-right: auto;">
+          มีคำถามหรือต้องการปรึกษา? ส่งข้อความมาหาเราได้เลย
+        </p>
+        
+        <div style="max-width: 600px; margin: 0 auto;">
+          <div class="card">
+            <h3 class="mb-md">ส่งข้อความถึงเรา</h3>
+            
+            <!-- TODO: Replace with Formspree/Tally form handler in production -->
+            <!-- For now using mailto fallback -->
+            <form action="mailto:hello@flowbiz.co.th" method="get" enctype="text/plain">
+              <div class="form-group">
+                <label for="name" class="form-label">ชื่อของคุณ</label>
+                <input 
+                  type="text" 
+                  id="name" 
+                  name="name"
+                  class="form-input" 
+                  required
+                  placeholder="ชื่อ นามสกุล"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="email" class="form-label">อีเมล</label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email"
+                  class="form-input" 
+                  required
+                  placeholder="your@email.com"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="company" class="form-label">บริษัท (ถ้ามี)</label>
+                <input 
+                  type="text" 
+                  id="company" 
+                  name="company"
+                  class="form-input" 
+                  placeholder="ชื่อบริษัทของคุณ"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="message" class="form-label">ข้อความ</label>
+                <textarea 
+                  id="message" 
+                  name="message"
+                  class="form-textarea" 
+                  required
+                  placeholder="บอกเราเกี่ยวกับธุรกิจของคุณและสิ่งที่คุณต้องการความช่วยเหลือ..."
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                ส่งข้อความ
+              </button>
+            </form>
+
+            <p class="text-muted mt-lg" style="font-size: 0.875rem; text-align: center; margin-top: 1.5rem; margin-bottom: 0;">
+              หรือส่งอีเมลมาที่ <a href="mailto:hello@flowbiz.co.th">hello@flowbiz.co.th</a>
+            </p>
+          </div>
+
+          <div class="card" style="background-color: var(--bg-secondary); border: none; margin-top: 2rem;">
+            <h3 class="mb-sm">เวลาตอบกลับ</h3>
+            <p class="mb-md">
+              เราจะตอบกลับภายใน 1-2 วันทำการ
+            </p>
+            <p class="text-muted mb-0" style="font-size: 0.875rem;">
+              เราอ่านทุกข้อความที่ส่งมา และจะตอบคุณโดยเร็วที่สุด
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>

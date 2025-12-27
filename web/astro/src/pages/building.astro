@@ -1,0 +1,78 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout 
+  title="กำลังสร้าง - FlowBiz"
+  description="ดูว่า FlowBiz กำลังพัฒนาอะไรอยู่ เราแชร์ความก้าวหน้าอย่างตรงไปตรงมา"
+>
+  <Header />
+  
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1 class="text-center mb-lg">สิ่งที่เรากำลังสร้าง</h1>
+        
+        <div style="max-width: 800px; margin: 0 auto;">
+          <p class="mb-lg">
+            เรากำลังพัฒนาเครื่องมือและบริการที่จะช่วยให้ธุรกิจทำงานได้ดีขึ้น
+            แต่เรายังไม่พร้อมที่จะเปิดตัวทุกอย่าง
+          </p>
+
+          <h2>ปัจจุบันกำลังทำอะไร</h2>
+          
+          <div class="card">
+            <h3>ทดลองแนวคิดใหม่</h3>
+            <p>
+              เรากำลังทดลองวิธีการใหม่ๆ ที่จะช่วยให้การทำงานในธุรกิจง่ายขึ้น
+              และมีประสิทธิภาพมากขึ้น
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>รับฟีดแบคจากลูกค้า</h3>
+            <p>
+              เราทำงานใกล้ชิดกับลูกค้าของเรา เพื่อเข้าใจความต้องการจริงๆ
+              และสร้างสิ่งที่ใช้งานได้จริง
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>สร้างทีละขั้นตอน</h3>
+            <p>
+              เราไม่รีบร้อน เราสร้างอย่างมั่นคง ทดสอบทุกอย่างให้ดี
+              ก่อนที่จะนำมาให้ลูกค้าใช้
+            </p>
+          </div>
+
+          <h2 class="mt-lg">สิ่งที่เราไม่ได้สัญญา</h2>
+          <p class="mb-md">
+            เรามีความซื่อสัตย์กับคุณ เราจะไม่บอกว่า:
+          </p>
+          <ul style="margin-bottom: 2rem; padding-left: 2rem;">
+            <li style="margin-bottom: 0.5rem;">เราไม่ใช่เครื่องมือรวมทุกอย่าง และไม่ทำทุกอย่างแทนคุณ</li>
+            <li style="margin-bottom: 0.5rem;">เราไม่รับประกันผลลัพธ์ 100%</li>
+            <li style="margin-bottom: 0.5rem;">เทคโนโลยีไม่สามารถแทนคนได้ทั้งหมด</li>
+            <li style="margin-bottom: 0.5rem;">เราไม่สัญญากำหนดการเปิดตัวล่วงหน้า</li>
+          </ul>
+
+          <p class="text-muted">
+            แทนที่จะสัญญา เราจะทำให้ดี และบอกความจริงกับคุณเสมอ
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background-color: var(--bg-secondary);">
+      <div class="container text-center">
+        <h2 class="mb-md">สนใจติดตามความคืบหน้า?</h2>
+        <p class="text-muted mb-lg">ติดต่อเราเพื่อรับข้อมูลเพิ่มเติม</p>
+        <a href="/contact" class="btn btn-primary">ติดต่อเรา</a>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>
