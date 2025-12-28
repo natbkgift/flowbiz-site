@@ -44,6 +44,6 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   </head>
   <body>
     <slot />
-    <script type="module" src="/nav-toggle.js"></script>
+    <script src="/nav-toggle.js" defer></script>
   </body>
 </html>
