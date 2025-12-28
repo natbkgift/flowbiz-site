@@ -22,6 +22,13 @@ document.addEventListener('DOMContentLoaded', () => {
     link.addEventListener('click', closeMenu);
   });
 
+  document.addEventListener('click', (event) => {
+    if (!nav.classList.contains('active')) return;
+    if (!(event.target instanceof Node)) return;
+    if (nav.contains(event.target) || toggleButton.contains(event.target)) return;
+    closeMenu();
+  });
+
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape' && nav.classList.contains('active')) {
       closeMenu();
