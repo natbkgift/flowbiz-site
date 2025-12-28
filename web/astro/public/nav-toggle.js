@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const toggleButton = document.querySelector('.menu-toggle');
+  const toggleButton = document.getElementById('menu-toggle');
   const nav = document.querySelector('#site-nav');
 
   if (!toggleButton || !nav) return;
@@ -9,11 +9,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeMenu = () => {
     nav.classList.remove('active');
     toggleButton.setAttribute('aria-expanded', 'false');
+    toggleButton.setAttribute('aria-label', 'เปิดเมนู');
   };
 
   toggleButton.addEventListener('click', () => {
     const isOpen = nav.classList.toggle('active');
-    toggleButton.setAttribute('aria-expanded', String(isOpen));
+    toggleButton.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    toggleButton.setAttribute('aria-label', isOpen ? 'ปิดเมนู' : 'เปิดเมนู');
   });
 
   navLinks.forEach((link) => {
