@@ -9,9 +9,11 @@ const isActive = (path: string) => pathname === path || pathname === path + '/';
       <a href="/" class="logo">FlowBiz</a>
 
       <div class="nav-wrapper">
-        <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox" />
-        <label for="nav-toggle" class="menu-toggle">เมนู</label>
-        <nav class="nav">
+        <button class="menu-toggle" aria-label="เปิดเมนู" aria-expanded="false" aria-controls="site-nav" type="button">
+          <span class="menu-icon" aria-hidden="true">☰</span>
+          <span class="menu-text">เมนู</span>
+        </button>
+        <nav class="nav" id="site-nav">
           <a href="/" class={`nav-link ${isActive('/') ? 'active' : ''}`}>หน้าแรก</a>
           <a href="/building" class={`nav-link ${isActive('/building') ? 'active' : ''}`}>กำลังสร้าง</a>
           <a href="/services" class={`nav-link ${isActive('/services') ? 'active' : ''}`}>บริการ</a>
