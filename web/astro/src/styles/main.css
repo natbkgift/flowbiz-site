@@ -22,7 +22,7 @@
 }
 
 body {
-  font-family: "Noto Sans Thai", "Noto Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "Noto Sans Thai", "Noto Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Tahoma, Arial, sans-serif;
   font-size: 18px;
   line-height: 1.7;
   color: var(--text-primary);
@@ -68,6 +68,14 @@ a {
 
 a:hover {
   color: var(--accent-hover);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 3px;
 }
 
 /* Responsive typography */
@@ -144,6 +152,9 @@ a:hover {
   color: var(--text-secondary);
   font-size: 1rem;
   transition: color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
 }
 
 .nav-link:hover {
@@ -157,25 +168,26 @@ a:hover {
 
 .menu-toggle {
   display: none;
+  align-items: center;
+  gap: var(--spacing-xs);
   background: none;
   border: 1px solid var(--border-color);
   border-radius: 999px;
-  padding: 0.4rem 0.9rem;
-  font-size: 0.95rem;
+  padding: 0.65rem 1rem;
+  font-size: 1rem;
   cursor: pointer;
   color: var(--text-primary);
+  min-height: 44px;
+  min-width: 44px;
 }
 
-.nav-toggle-checkbox {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
+.menu-icon {
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+.menu-text {
+  line-height: 1;
 }
 
 /* Mobile navigation */
@@ -198,9 +210,10 @@ a:hover {
     padding: var(--spacing-md);
     gap: var(--spacing-sm);
     align-items: flex-start;
+    width: 100%;
   }
-  
-  .nav-toggle-checkbox:checked ~ .nav {
+
+  .nav.active {
     display: flex;
   }
   
@@ -230,6 +243,7 @@ a:hover {
   border: none;
   font-size: 1rem;
   text-decoration: none;
+  min-height: 44px;
 }
 
 .btn-primary {
@@ -336,6 +350,7 @@ a:hover {
   font-family: inherit;
   font-size: 1rem;
   transition: border-color 0.2s ease;
+  min-height: 44px;
 }
 
 .form-input:focus,

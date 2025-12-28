@@ -7,7 +7,7 @@ interface Props {
   ogImage?: string;
 }
 
-const { title, description, ogImage = '/og-image.svg' } = Astro.props;
+const { title, description, ogImage = '/og-image.png' } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
@@ -44,5 +44,6 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   </head>
   <body>
     <slot />
+    <script src="/nav-toggle.js" defer></script>
   </body>
 </html>
