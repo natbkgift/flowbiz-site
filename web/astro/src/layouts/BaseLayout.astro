@@ -13,7 +13,7 @@ const ogImageUrl = new URL(ogImage, Astro.site).href;
 ---
 
 <!DOCTYPE html>
-<html lang="th">
+<html lang="th" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -42,9 +42,55 @@ const ogImageUrl = new URL(ogImage, Astro.site).href;
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700&family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script>
+      {`
+        (function() {
+          const storageKey = 'flowbiz-theme';
+          const docEl = document.documentElement;
+          const stored = localStorage.getItem(storageKey);
+          const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          const theme = stored || (systemDark ? 'dark' : 'light');
+          docEl.setAttribute('data-theme', theme);
+        })();
+      `}
+    </script>
   </head>
   <body>
     <slot />
+    <script>
+      {`
+        (function() {
+          const storageKey = 'flowbiz-theme';
+          const docEl = document.documentElement;
+          const setTheme = (next) => {
+            docEl.setAttribute('data-theme', next);
+            localStorage.setItem(storageKey, next);
+          };
+          document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.querySelector('[data-theme-toggle]');
+            const updateState = () => {
+              const current = docEl.getAttribute('data-theme') || 'light';
+              if (btn) {
+                btn.setAttribute('aria-pressed', current === 'dark');
+                btn.setAttribute('data-theme-state', current);
+                const icon = btn.querySelector('[data-theme-icon]');
+                if (icon) {
+                  icon.textContent = current === 'dark' ? '☀' : '🌙';
+                }
+              }
+            };
+            if (btn) {
+              btn.addEventListener('click', () => {
+                const current = docEl.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+                setTheme(current);
+                updateState();
+              });
+              updateState();
+            }
+          });
+        })();
+      `}
+    </script>
     <script src="/nav-toggle.js" defer></script>
   </body>
 </html>

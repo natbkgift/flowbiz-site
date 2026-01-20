@@ -4,11 +4,19 @@ const isActive = (path: string) => pathname === path || pathname === path + '/';
 ---
 
 <header class="header">
+  <a class="skip-link" href="#main-content">ข้ามไปเนื้อหา</a>
   <div class="container">
     <div class="header-content">
-      <a href="/" class="logo">FlowBiz</a>
+      <a href="/" class="logo" aria-label="FlowBiz หน้าแรก">
+        <span class="logo-mark" aria-hidden="true"></span>
+        <span class="logo-text">FlowBiz</span>
+      </a>
 
       <div class="nav-wrapper">
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="สลับโหมดแสง" aria-pressed="false">
+          <span class="theme-icon" data-theme-icon aria-hidden="true">🌙</span>
+          <span class="sr-only">Toggle theme</span>
+        </button>
         <button class="menu-toggle" id="menu-toggle" aria-label="เปิดเมนู" aria-expanded="false" aria-controls="site-nav" type="button">
           <span class="menu-icon" aria-hidden="true">☰</span>
           <span class="menu-text">เมนู</span>
