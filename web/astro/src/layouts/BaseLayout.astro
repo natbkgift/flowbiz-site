@@ -81,8 +81,8 @@ const ogImageUrl = new URL(ogImage, Astro.site).href;
             };
             if (btn) {
               btn.addEventListener('click', () => {
-                const current = docEl.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-                setTheme(current);
+                const nextTheme = docEl.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+                setTheme(nextTheme);
                 updateState();
               });
               updateState();
