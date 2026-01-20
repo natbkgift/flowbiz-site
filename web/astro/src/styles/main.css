@@ -572,6 +572,11 @@ p {
   mix-blend-mode: screen;
 }
 
+@media (prefers-color-scheme: dark) {
+  .hero-mascot {
+    mix-blend-mode: normal;
+  }
+}
 /* Footer */
 .footer {
   background-color: var(--fb-surface);
