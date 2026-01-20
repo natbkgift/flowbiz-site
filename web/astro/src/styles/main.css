@@ -194,6 +194,13 @@ p {
   padding: var(--spacing-sm) 0;
 }
 
+@supports not (backdrop-filter: blur(1px)) {
+  .header {
+    backdrop-filter: none;
+    background: var(--fb-bg);
+  }
+}
+
 .header-content {
   display: flex;
   align-items: center;
